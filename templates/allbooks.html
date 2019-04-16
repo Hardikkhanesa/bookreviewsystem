@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flights
+{% endblock %}
+
+{% block body %}
+    <h1>All Books</h1>
+
+    <ul>
+        {% for book in books %}
+            <li>
+              <!---  <a href="{{ url_for('book', books_id=books.id) }}">-->
+                    {{ books.id }} {{ has}} {{ books.isbn }} {{ and }} {{ books.book}} {{ and }} {{ books.year}}
+                
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
