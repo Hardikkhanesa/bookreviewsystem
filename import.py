@@ -39,6 +39,12 @@ def main():
                                             year text
                                         ); """
 
+    sql_create_users_table = """ CREATE TABLE users (
+                                                id integer primary key,
+                                                username text not null,
+                                                password text
+                                            ); """
+    create_table(conn, sql_create_users_table)
     create_table(conn, sql_create_books_table)
     reader = csv.reader(f)
     i = 0
