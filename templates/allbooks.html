@@ -3,9 +3,9 @@
 {% block title %}
     Books
 {% endblock %}
-
 {% block body %}
     <h1>All Books</h1>
+    <a href="{{ url_for("logout") }}">Log out</a>
     {{ len }}
     Format it as you please
     <ul>
