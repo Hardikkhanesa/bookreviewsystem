@@ -1,17 +1,18 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Flights
+    Books
 {% endblock %}
 
 {% block body %}
     <h1>All Books</h1>
-
+    {{ len }}
+    Format it as you please
     <ul>
         {% for book in books %}
             <li>
-              <!---  <a href="{{ url_for('book', books_id=books.id) }}">-->
-                    {{ books.id }} {{ has}} {{ books.isbn }} {{ and }} {{ books.book}} {{ and }} {{ books.year}}
+
+                   BOOK ISBN: {{ book[0] }}, TITLE: {{ book[1]}}, AUTHOR: {{ book[2] }}, YEAR: {{ book[3]}}
                 
             </li>
         {% endfor %}
